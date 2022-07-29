@@ -33,11 +33,11 @@ body {
   background: var(--gray-5);
 }
 
-/* NFT - Card */
+/* NFT Card - Mobile Version*/
 .card {
   display: flex;
   flex-direction: column;
-  width: 380px;
+  width: 312px;
   height: 468px;
   border-radius: 14px;
   overflow: hidden;
@@ -46,7 +46,7 @@ body {
 
 .card-image {
   width: 100%;
-  height: 388px;
+  height: 346px;
 }
 
 .card-image .thumb {
@@ -57,29 +57,30 @@ body {
 
 .card-info {
   width: 100%;
-  height: 80px;
-  padding: 16px 20px;
+  height: 122px;
+  padding: 16px 16px;
   background: var(--gray-100);
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .card-author {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
   padding: 4px 4px 4px 0px;
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 0.03em;
   color: var(--gray-0);
+  font-weight: var(--semibold);
 }
 
 .card-author .text-1 {
   text-transform: uppercase;
-  font-weight: var(--regular);
 }
 
 .card-author .avatar {
@@ -96,16 +97,12 @@ body {
   object-fit: cover;
 }
 
-.card-author .text-2 {
-  font-weight: var(--medium);
-}
-
 .card-price {
+  align-self: flex-end;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 4px;
   font-weight: var(--semibold);
 }
 
@@ -119,4 +116,25 @@ body {
   font-size: 24px;
   line-height: 24px;
   color: var(--gray-0);
+}
+
+/* NFT Card - Tablet and Desktop Version*/
+@media screen and (min-width: 744px) {
+  .card {
+    width: 380px;
+    height: 468px;
+  }
+
+  .card-image {
+    height: 388px;
+  }
+
+  .card-info {
+    height: 80px;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
